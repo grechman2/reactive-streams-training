@@ -1,6 +1,7 @@
 package tech.hm.courceutils;
 
 import com.github.javafaker.Faker;
+import org.reactivestreams.Subscriber;
 
 import java.util.function.Consumer;
 
@@ -22,6 +23,14 @@ public class Util {
 
     public static Faker faker() {
         return FAKER;
+    }
+
+    public static Subscriber<Object> getDefaultSubscriber(){
+        return new DefaultSubscriber();
+    }
+
+    public static Subscriber<Object> getDefaultSubscriber(String name){
+        return new DefaultSubscriber(name);
     }
 
     public static void sleepSeconds(int seconds){
