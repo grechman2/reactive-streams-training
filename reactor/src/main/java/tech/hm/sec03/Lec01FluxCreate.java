@@ -17,6 +17,5 @@ public class Lec01FluxCreate {
 
         }).subscribeWith(Util.getDefaultSubscriber());
 
-
     }
 }
